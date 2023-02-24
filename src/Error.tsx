@@ -1,4 +1,4 @@
-import "./Error.css";
+import "./styles/Error.scss";
 
 function Error() {
   return (
@@ -13,11 +13,11 @@ function Error() {
           className="img-404"
         /> */}
       </div>
-        <header className="error-header">
-          <p>
-            <a href="/">return</a>
-          </p>
-        </header>
+      <header className="error-header">
+        <p>
+          <a href="/">return</a>
+        </p>
+      </header>
     </div>
   );
 }
