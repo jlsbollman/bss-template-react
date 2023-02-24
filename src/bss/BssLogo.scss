@@ -1,0 +1,91 @@
+.bss-logo {
+  --letter-b-color: #4bffa5;
+  --letter-middle-s-color: #4ba5ff;
+  --letter-last-s-color: #ff4b4b;
+  --transparent: #ffffff00;
+
+  display: flex;
+  justify-content: space-around;
+  height: 200px;
+  width: 100vw;
+  pointer-events: none;
+
+  .logo {
+    display: flex;
+
+    .rectangle {
+      width: 50px;
+      height: 200px;
+      background-color: var(--letter-b-color);
+      transform: translate(50px);
+      margin-left: -50px;
+    }
+
+    .circle {
+      width: 100px;
+      height: 100px;
+      background-color: grey;
+      border-radius: 50%;
+    }
+
+    .letter-b {
+      --color: var(--letter-b-color);
+    }
+
+    .middle-s {
+      --color: var(--letter-middle-s-color);
+    }
+
+    .last-s {
+      --color: var(--letter-last-s-color);
+    }
+
+    .backward {
+      background: conic-gradient(
+        var(--color) 180deg,
+        #ffffff00 180deg,
+        #ffffff00 270deg,
+        var(--color) 270deg
+      );
+    }
+
+    .top {
+      background: conic-gradient(
+        var(--color) 90deg,
+        #ffffff00 90deg,
+        #ffffff00 180deg,
+        var(--color) 180deg
+      );
+    }
+
+    .bottom {
+      background: conic-gradient(var(--color) 270deg, #ffffff00 270deg);
+    }
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .top,
+    .backward {
+      animation: bss-logo-spin infinite 16s linear reverse;
+    }
+  
+    .bottom {
+      animation: bss-logo-spin infinite 16s linear;
+    }
+  }
+  
+  @keyframes bss-logo-spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    37.5% {
+      transform: rotate(0deg);
+    }
+    62.5% {
+      transform: rotate(360deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
