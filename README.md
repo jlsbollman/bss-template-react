@@ -1,33 +1,68 @@
-# Getting Started with Create React App
+# A Basic React w/ TypeScript Template
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a base template to use when creating a new website using React.
+It contains all the basic functionality required for a website that isn't data heavy.
+
+## Major Frameworks
+
+- Bootstrapped with [Create React App](https://github.com/facebook/create-react-app)
+- TypeScript
+- Webpack/Babel
+- React Router
+- Docker/nginx
+- Jest
+
+## Docker
+
+This template includes a Dockerfile to containerize the React app.
+It is configured with nginx and is ready to be deployed.
+Extra configuration is required to push to a remote Artifact Repository
+
+## Webpack/Babel
+
+Webpack/Babel is included to work with sass/scss.
+Configuration is under the `./webpack` directory.
+The `start` and `build` commands utilize webpack.
+
+## Unit Tests
+
+Tests can be found under `./src/__tests__`.
+Startup configuration is in `./src/setupTests.ts`.
+Run through the `npm run test` command.
 
 ## Available Scripts
 
 In the project directory, you can run:
 
-### `npm start`
+### `npm run start`
 
-Runs the app in the development mode.\
+Runs the app with Webpack/Babel in development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
+Builds the app for production using Webpack/Babel to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run docker-start`
+
+Builds a new Docker image and creates/starts a container.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+Edits won't be visible until the `npm run docker-start` command is run again and a new container is started.
+
+### `npm run test`
+
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run eject`
 
