@@ -1,9 +1,9 @@
 # A Basic React w/ TypeScript Template
 
-![bss-logo](https://user-images.githubusercontent.com/18294133/221908459-f4e5901e-a595-4d6b-9e66-c5e266dfabc0.gif)
-
 This project is a base template to use when creating a new website using React.
 It contains all the basic functionality required for a website that isn't data heavy.
+
+![bss-logo](https://user-images.githubusercontent.com/18294133/221908459-f4e5901e-a595-4d6b-9e66-c5e266dfabc0.gif)
 
 ## Major Frameworks
 
